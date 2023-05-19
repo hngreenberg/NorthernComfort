@@ -18,6 +18,6 @@ export default function App() {
           <Footer />
         </Router>
       </div>
-      </ChakraProvider>
+    </ChakraProvider>
   );
 }
