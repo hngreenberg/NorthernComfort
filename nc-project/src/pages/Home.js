@@ -1,10 +1,16 @@
 import React from 'react';
-
+import { Button } from "@chakra-ui/react";
 
 function Home () {
     return (
     
-      <h1> TESTING </h1>
+      <div>
+        <h1> TESTING </h1>
+
+      <Button variant="primary">Primary Button</Button>
+      <Button variant="secondary">Secondary Button</Button>
+    </div>
+
     );
 }
 

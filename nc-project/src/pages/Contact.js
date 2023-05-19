@@ -1,8 +1,10 @@
 import React from 'react';
+import { Button } from "@chakra-ui/react";
 
 function ContactForm() {
   return (
     <form>
+    
       <label htmlFor="firstName">First Name:</label>
       <input type="text" id="firstName" name="firstName" required />
 
@@ -18,7 +20,7 @@ function ContactForm() {
       <label htmlFor="message">Message:</label>
       <textarea id="message" name="message" required></textarea>
 
-      <button type="submit">Submit</button>
+      <Button variant="red" type="submit">Submit</Button>
     </form>
   );
 }
