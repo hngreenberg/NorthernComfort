@@ -8,9 +8,9 @@ function Header () {
        
         <div className="header">
           <a className="active" href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-          <a href="#reviews">Reviews</a>
+          <a href="about">About</a>
+          <a href="contact">Contact</a>
+          <a href="reviews">Reviews</a>
         </div>
       </div>
     </header>
