@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import ContactForm from "./pages/Contact";
+import Navbar from "./components/Navbar";
+import './App.css';
 
 export default function App() {
   return (
@@ -11,6 +13,7 @@ export default function App() {
       <div>
         <Router>
           <Header />
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<ContactForm />} />
