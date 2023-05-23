@@ -1,10 +1,9 @@
 import React from 'react';
+import { Button } from "@chakra-ui/react";
 
 function Home() {
   return (
     <div>
-    
-
       <section id="about">
         <h2>A COMPANY YOU CAN TRUST</h2>
         <h3>YOU'RE SURE TO BE IMPRESSED BY OUR KNOWLEDGE AND EXPERTISE</h3>
