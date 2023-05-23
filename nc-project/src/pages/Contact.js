@@ -72,8 +72,25 @@ function ContactForm() {
         </Button>
       </form>
     </Box>
-    <Box flex={1} bg="blue" color="white" p={4}>
-    <p>test</p>
+    <Box flex={1} bg="blue" color="white" p={4} display="flex" alignItems="center" justifyContent="center">
+        <div>
+            <h2>NORTHERN COMFORT LLC</h2>
+            <p>Arlington, WA 98223</p>
+
+            <h3>CALL US</h3>
+            <p>Phone: (425) 588-4139</p>
+
+            <h3>HOURS</h3>
+            <p>Mon: 8:00AM-8:00PM</p>
+            <p>Tue: 8:00AM-8:00PM</p>
+            <p>Wed: 8:00AM-8:00PM</p>
+            <p>Thu: 8:00AM-8:00PM</p>
+            <p>Fri: 8:00AM-8:00PM</p>
+            <p>Sat: 8:00AM-8:00PM</p>
+            <p>Sun: Closed</p>
+
+            <p>24 Hour Emergency Services Available</p>
+        </div>
     </Box>
   </Flex>
   );
