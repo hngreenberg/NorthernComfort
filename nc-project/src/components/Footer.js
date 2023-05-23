@@ -3,9 +3,12 @@ import React from 'react';
 function Footer() {
   return (
     <div className="footer">
-        <h1>TEST FOOTER</h1>
+       
+        <img id="footerlogo" src="mascot.png" alt="" />  
+         
+      </div>
     
-    </div>
+   
   );
 }
 

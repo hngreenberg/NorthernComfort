@@ -1,7 +1,7 @@
 import React from 'react';
 
 function About () {
-    return 
+    return (
         <div>
             <h1>OUR COMMITMENT TO YOU</h1>
             <p>
@@ -13,4 +13,7 @@ function About () {
             </p>
             
         </div>
+    )
 }
+
+export default About;
