@@ -10,7 +10,7 @@ import './App.css';
 import About from "./pages/About";
 import Services from "./pages/Services";
 
-//imports custom componenets from customTheme.js
+// extends theme to use custom-css settings for components in
 const theme = extendTheme(customTheme);
 
 export default function App() {
