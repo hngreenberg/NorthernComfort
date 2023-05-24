@@ -1,4 +1,4 @@
-# Name of Project
+# Northern Comfort
 
 ## Table of Contents
 
