@@ -17,7 +17,7 @@ function About() {
       backgroundColor="blue"
     >
       <Grid templateColumns="50% 50%" gap={4} p="10" paddingTop={0}>
-        <GridItem colSpan={1} paddingTop={16}>
+        <GridItem colSpan={1} paddingTop={16} marginTop={14}>
           <div style={{ textAlign: "left", lineHeight: "3" }}>
             <h1
               style={{
