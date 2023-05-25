@@ -34,8 +34,8 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addContactMessage: async (parent, { username, email, password }) => {
-      const user = await User.create({ username, email, password });
+    addContactMessage: async (parent, { firstName, lastName, phoneNumber, email, message }) => {
+      const contactMessage = await ContactMessage.create({ username, email, password });
       if (!user) {
         throw new Error('Something went wrong!');
       }
