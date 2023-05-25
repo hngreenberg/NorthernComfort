@@ -12,7 +12,10 @@ import AuthService from '../utils/auth';
 
 function Navbar() {
     return (
-        <nav>
+        <nav style={{
+          fontFamily: "'Jost",
+          fontWeight: "bold",
+          fontSize: "18px", }} >
             <Flex align="center" justify="right">
             <Box display="flex" alignItems="center" justifyContent="space-between">
         <Breadcrumb spacing="8px" >

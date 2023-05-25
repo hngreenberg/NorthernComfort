@@ -14,10 +14,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-}
-
-.navbar a {
-  color: inherit;
+  
 }
 
 .navbar ul {
@@ -28,6 +25,21 @@
   gap: 2rem;
 }
 
+/* <<<<<<< HEAD */
 .contactHeader {
   font-weight: 600;
+}
+/* ======= */
+.header {
+  background-color: #BAD8F3;
+}
+
+.headtitle {
+  position: relative;
+  left: 275px;
+  bottom: 60px;
+  font-weight: bold;
+  font-size: 150%;
+
+/* >>>>>>> origin */
 }
