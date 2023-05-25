@@ -15,7 +15,10 @@ function Navbar() {
         <nav style={{
           fontFamily: "'Jost",
           fontWeight: "bold",
-          fontSize: "18px", }} >
+          fontSize: "18px",
+          position: "relative",
+          zIndex:1
+         }} >
             <Flex align="center" justify="right">
             <Box display="flex" alignItems="center" justifyContent="space-between">
         <Breadcrumb spacing="8px" >
