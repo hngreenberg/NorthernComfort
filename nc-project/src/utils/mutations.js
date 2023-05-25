@@ -4,41 +4,23 @@ export const LOGIN_ADMIN = gql`
   mutation login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
       token
-      user {
+      admin {
         _id
         username
         email
-        bookCount
-        savedBooks {
-          bookId
-          authors
-          description
-          title
-          image
-          link
-        }
       }
     }
   }
 `;
 
 export const ADD_CONTACT_MESSAGE = gql`
-  mutation addUser($username: String!, $email: String!, $password: String!) {
-    addUser(username: $username, email: $email, password: $password) {
+  mutation addContactMessage($firstName: String!, $lastName: String!, $phoneNumber: String!, $email: String!, $message: String!) {
+    addContactMessage(firstName: $firstName, lastName: $lastName, phoneNumber: $phoneNumber, email: $email, message: $message) {
       token
-      user {
+      contactMessage {
         _id
         username
         email
-        bookCount
-        savedBooks {
-          bookId
-          authors
-          description
-          title
-          image
-          link
-        }
       }
     }
   }
