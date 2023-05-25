@@ -27,7 +27,7 @@ const ContactMessages = () => {
       <ul>
         {contactMessages.map((message) => (
           <li key={message._id}>
-            <p>Name: {message.name}</p>
+            <p>Name: {message.firstName} {message.lastName}</p>
             <p>Email: {message.email}</p>
             <p>Message: {message.message}</p>
           </li>
