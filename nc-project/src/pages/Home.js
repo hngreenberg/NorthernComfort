@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Text, Grid, GridItem } from "@chakra-ui/react";
+import { PhoneIcon } from '@chakra-ui/icons'
+import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
 import bgImage from "../images/couple-sitting.jpg";
 import "../Fonts.css";
 
@@ -43,12 +44,24 @@ function Home() {
     <>
     <Box style={{
       position: 'absolute',
+      zIndex:"1",
+      marginLeft:"10px",
+      display: "flex",
+      alignItems: "center",
+      marginTop:"-25px"
     }}>
-    <h2
+    <PhoneIcon />
+    <Text style={{ marginLeft: "5px", fontSize:"13px" }}>(415)5800-001 | Call Today for <strong>FREE</strong> Estimate</Text>
+    </Box>
+    <Box style={{
+      position: 'absolute',
+      MarginBottom:"60vw"
+    }}>
+    <h2 
       className="headtitle"
       style={{
         fontWeight: "bold",
-        color: "#F2AF29",
+        color: "tomato",
         textAlign: "center",
         fontSize: "3em",
         fontFamily: "'Satisfy', cursive",
