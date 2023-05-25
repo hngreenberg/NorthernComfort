@@ -5,6 +5,7 @@ import { Form, Button, Alert } from 'react-bootstrap';
 // import { loginUser } from '../utils/API';
 import { useMutation } from '@apollo/client';
 import { LOGIN_ADMIN } from '../utils/mutations';
+import { useNavigate } from 'react-router-dom';
 
 import Auth from '../utils/auth';
 
@@ -12,8 +13,9 @@ const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-
   const [login, { error, data }] = useMutation(LOGIN_ADMIN);
+  // const [formState, setFormState] = useState({ email: '', password: '' });
+  const navigate = useNavigate();
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -37,17 +39,40 @@ const LoginForm = () => {
 
       Auth.login(data.login.token);
 
+      setUserFormData({
+        username: '',
+        email: '',
+        password: '',
+      });
+
+      navigate.push('/messages');
+
     } catch (err) {
       console.error(err);
       setShowAlert(true);
     }
 
-    setUserFormData({
-      username: '',
-      email: '',
-      password: '',
-    });
+    // setUserFormData({
+    //   username: '',
+    //   email: '',
+    //   password: '',
+    // });
+    // navigate.push('/messages');
   };
+
+  // const handleFormSubmit = async (event) => {
+  //   event.preventDefault();
+  //   try {
+  //     const { data } = await login({
+  //       variables: { ...formState },
+  //     });
+  //     Auth.login(data.login.token);
+  //     setFormState({ email: '', password: '' });
+  //     navigate.push('/messages'); // navigate to the /messages route
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // };
 
   return (
     <>

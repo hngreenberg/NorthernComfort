@@ -13,6 +13,7 @@ import './Fonts.css'
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import AdminLogin from "./pages/AdminLogin";
+import ContactMessages from "./pages/ContactMessages";
 
 // extends theme to use custom-css settings for components in
 const theme = extendTheme(customTheme);
@@ -42,6 +43,7 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/contact" element={<ContactForm />} />
               <Route path="/login" element={<AdminLogin />} />
+              <Route path="/messages" element={<ContactMessages />} />
               <Route path="about" element={<About />} />
               <Route path="services" element={<Services />} />
             </Routes>

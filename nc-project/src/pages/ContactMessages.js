@@ -8,78 +8,95 @@ import {
 } from 'react-bootstrap';
 import { useQuery, useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
-import { removeBookId } from '../utils/localStorage';
+// import { removeBookId } from '../utils/localStorage';
 import { GET_ADMIN } from '../utils/queries';
+import { GET_CONTACT_MESSAGES } from '../utils/queries';
 // import { ContactMessage } from '../../../server/models';
 
 const ContactMessages = () => {
-  // const [userData, setUserData] = useState({});
-  const {loading, data } = useQuery(LOGIN_ADMIN);
+  // const {loading, data } = useQuery(LOGIN_ADMIN);
+  const {loading, data } = useQuery(GET_CONTACT_MESSAGES);
 
-  const [removeBook, { error }] = useMutation(REMOVE_BOOK);
-
-  const userData = data?.me || {};
+  // const userData = data?.me || {};
+  const contactMessages = data?.contactMessages || [];
 
   // create function that accepts the book's mongo _id value as param and deletes the book from the database
-  const handleDeleteBook = async (bookId) => {
-    const token = Auth.loggedIn() ? Auth.getToken() : null;
+  // const handleDeleteBook = async (bookId) => {
+  // const token = Auth.loggedIn() ? Auth.getToken() : null;
 
-    // const { data } = useMutation(REMOVE_BOOK);
+  //   // const { data } = useMutation(REMOVE_BOOK);
 
-    if (!token) {
-      return false;
-    }
+  //   if (!token) {
+  //     return false;
+  //   }
 
-    try {
-      const {data} = await removeBook({
-        variables: { bookId },
-      });
-      removeBookId(bookId);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  //   try {
+  //     const {data} = await removeBook({
+  //       variables: { bookId },
+  //     });
+  //     removeBookId(bookId);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
   // if data isn't here yet, say so
   if (loading) {
     return <h2>LOADING...</h2>;
   }
 
+  // const contactMessages = data?.contactMessages || [];
+
   return (
     <>
-      <div className='text-light bg-dark p-5'>
-        <Container>
-          <h1>Viewing saved books!</h1>
-        </Container>
-      </div>
-      <Container>
-        <h2 className='pt-5'>
-          {userData.savedBooks.length
-            ? `Viewing ${userData.savedBooks.length} saved ${userData.savedBooks.length === 1 ? 'book' : 'books'}:`
-            : 'You have no saved books!'}
-        </h2>
-        <Row>
-          {userData.savedBooks.map((book, index) => {
-            return (
-              <Col md="4" key={index}>
-                <Card key={book.bookId} border='dark'>
-                  {book.image ? <Card.Img src={book.image} alt={`The cover for ${book.title}`} variant='top' /> : null}
-                  <Card.Body>
-                    <Card.Title>{book.title}</Card.Title>
-                    <p className='small'>Authors: {book.authors}</p>
-                    <Card.Text>{book.description}</Card.Text>
-                    <Button className='btn-block btn-danger' onClick={() => handleDeleteBook(book.bookId)}>
-                      Delete this Book!
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            );
-          })}
-        </Row>
-      </Container>
+      <h1>Welcome, admin!</h1>
+      <ul>
+        {contactMessages.map((message) => (
+          <li key={message._id}>
+            <p>Name: {message.name}</p>
+            <p>Email: {message.email}</p>
+            <p>Message: {message.message}</p>
+          </li>
+        ))}
+      </ul>
     </>
   );
+
+  // return (
+  //   <>
+  //     <div className='text-light bg-dark p-5'>
+  //       <Container>
+  //         <h1>Viewing saved books!</h1>
+  //       </Container>
+  //     </div>
+  //     <Container>
+  //       <h2 className='pt-5'>
+  //         {userData.savedBooks.length
+  //           ? `Viewing ${userData.savedBooks.length} saved ${userData.savedBooks.length === 1 ? 'book' : 'books'}:`
+  //           : 'You have no saved books!'}
+  //       </h2>
+  //       <Row>
+  //         {userData.savedBooks.map((book, index) => {
+  //           return (
+  //             <Col md="4" key={index}>
+  //               <Card key={book.bookId} border='dark'>
+  //                 {book.image ? <Card.Img src={book.image} alt={`The cover for ${book.title}`} variant='top' /> : null}
+  //                 <Card.Body>
+  //                   <Card.Title>{book.title}</Card.Title>
+  //                   <p className='small'>Authors: {book.authors}</p>
+  //                   <Card.Text>{book.description}</Card.Text>
+  //                   <Button className='btn-block btn-danger' onClick={() => handleDeleteBook(book.bookId)}>
+  //                     Delete this Book!
+  //                   </Button>
+  //                 </Card.Body>
+  //               </Card>
+  //             </Col>
+  //           );
+  //         })}
+  //       </Row>
+  //     </Container>
+  //   </>
+  // );
 };
 
 export default ContactMessages;

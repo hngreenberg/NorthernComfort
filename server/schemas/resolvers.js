@@ -1,17 +1,8 @@
-const { Tech, Matchup, Reviewmodel, Admin, ContactMessage } = require('../models');
+const { Admin, ContactMessage } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
-  // Query: {
-  //   tech: async () => {
-  //     return Tech.find({});
-  //   },
-  //   matchups: async (parent, { _id }) => {
-  //     const params = _id ? { _id } : {};
-  //     return Matchup.find(params);
-  //   },
-  // },
   Query: {
     admin: async (parent, args, context) => {
       if (context.admin) {
