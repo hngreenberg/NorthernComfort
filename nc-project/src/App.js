@@ -10,12 +10,14 @@ import './App.css';
 import About from "./pages/About";
 import Services from "./pages/Services";
 import './Fonts.css'
+import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 
 // extends theme to use custom-css settings for components in
 const theme = extendTheme(customTheme);
 
-const httpLink = createHttpLink({uri: '/graphql',});
-// const httpLink = createHttpLink({uri: 'http://localhost:3001/graphql',});
+// const httpLink = createHttpLink({uri: '/graphql',});
+const httpLink = createHttpLink({uri: 'http://localhost:3001/graphql',});
 
 const authLink = setContext((_, {headers}) => {
   const token = localStorage.getItem('id_token');
