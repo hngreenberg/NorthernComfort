@@ -4,3 +4,4 @@ const Admin = require('./admin');
 const ContactMessage = require('./ContactMessage');
 
 module.exports = { Tech, Matchup, Admin, ContactMessage };
+
