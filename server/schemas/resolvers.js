@@ -14,33 +14,47 @@ const resolvers = {
   // },
   Query: {
     admin: async (parent, args, context) => {
-      if (context.user) {
-        const user = await User.findById(context.user._id).populate('savedBooks');
-        return user;
+      if (context.admin) {
+        const admin = await Admin.findById(context.admin._id);
+        return admin;
+      }
+      throw new Error('You need to be logged in!');
+    },
+    contactMessages: async (parent, args, context) => {
+      if (context.admin) {
+        const contactMessages = await ContactMessage.find();
+        return contactMessages;
       }
       throw new Error('You need to be logged in!');
     },
   },
   Mutation: {
     login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
-      if (!user) {
+      const admin = await Admin.findOne({ email });
+      if (!admin) {
         throw new Error("Can't find this user");
       }
-      const correctPw = await user.isCorrectPassword(password);
+      const correctPw = await admin.isCorrectPassword(password);
       if (!correctPw) {
         throw new Error('Wrong password!');
       }
-      const token = signToken(user);
-      return { token, user };
+      const token = signToken(admin);
+      return { token, admin };
     },
-    addContactMessage: async (parent, { firstName, lastName, phoneNumber, email, message }) => {
-      const contactMessage = await ContactMessage.create({ username, email, password });
-      if (!user) {
+    addAdmin: async (parent, { username, email, password }) => {
+      const admin = await Admin.create({ username, email, password });
+      if (!admin) {
         throw new Error('Something went wrong!');
       }
-      const token = signToken(user);
-      return { token, user };
+      const token = signToken(admin);
+      return { token, admin };
+    },
+    addContactMessage: async (parent, { firstName, lastName, phoneNumber, email, message }) => {
+      const contactMessage = await ContactMessage.create({ firstName, lastName, phoneNumber, email, message });
+      if (!contactMessage) {
+        throw new Error('Something went wrong!');
+      }
+      return contactMessage;
     },
   },
 };

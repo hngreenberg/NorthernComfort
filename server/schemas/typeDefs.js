@@ -8,7 +8,7 @@ const typeDefs = gql`
   }
 
   type ContactMessage {
-    contactMessageId: ID!
+    _id: ID!
     firstName: String
     lastName: String
     phoneNumber: String
@@ -18,26 +18,18 @@ const typeDefs = gql`
 
   type Auth {
     token: ID!
-    user: User
-  }
-
-  input BookInput {
-    authors: [String]
-    description: String
-    title: String
-    bookId: String
-    image: String
-    link: String
+    admin: Admin
   }
 
   type Query {
     admin: Admin
+    contactMessages: [ContactMessage]
   }
 
   type Mutation {
     login(email: String!, password: String!): Auth
     addAdmin(username: String!, email: String!, password: String!): Auth
-    addContactMessage(firstName: String!, lastName: String!, phoneNumber: String!, email: String!, message: String!): Auth
+    addContactMessage(firstName: String!, lastName: String!, phoneNumber: String!, email: String!, message: String!): ContactMessage
   }
 `;
 

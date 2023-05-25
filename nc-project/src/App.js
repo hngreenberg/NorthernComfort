@@ -12,6 +12,7 @@ import Services from "./pages/Services";
 import './Fonts.css'
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import AdminLogin from "./pages/AdminLogin";
 
 // extends theme to use custom-css settings for components in
 const theme = extendTheme(customTheme);
@@ -31,20 +32,23 @@ const client = new ApolloClient({
 
 export default function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <div>
-        <Router>
-          <Header />
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<ContactForm />} />
-            <Route path="about" element={<About />} />
-            <Route path="services" element={<Services />} />
-          </Routes>
-          <Footer />
-        </Router>
-      </div>
-    </ChakraProvider>
+    <ApolloProvider client={client}>
+      <ChakraProvider theme={theme}>
+        <div>
+          <Router>
+            <Header />
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/contact" element={<ContactForm />} />
+              <Route path="/login" element={<AdminLogin />} />
+              <Route path="about" element={<About />} />
+              <Route path="services" element={<Services />} />
+            </Routes>
+            <Footer />
+          </Router>
+        </div>
+      </ChakraProvider>
+    </ApolloProvider>
   );
 }

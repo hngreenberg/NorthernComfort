@@ -27,14 +27,14 @@ export const ADD_ADMIN = gql`
 `;
 
 export const ADD_CONTACT_MESSAGE = gql`
-  mutation addContactMessage($firstName: String!, $lastName: String!, $phoneNumber: String!, $email: String!, $message: String!) {
-    addContactMessage(firstName: $firstName, lastName: $lastName, phoneNumber: $phoneNumber, email: $email, message: $message) {
-      token
-      contactMessage {
-        _id
-        username
-        email
-      }
-    }
+mutation addContactMessage($firstName: String!, $lastName: String!, $phoneNumber: String!, $email: String!, $message: String!) {
+  addContactMessage(firstName: $firstName, lastName: $lastName, phoneNumber: $phoneNumber, email: $email, message: $message) {
+    _id
+    email
+    firstName
+    lastName
+    message
+    phoneNumber
   }
+}
 `;
