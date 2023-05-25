@@ -14,6 +14,19 @@ import './Fonts.css'
 // extends theme to use custom-css settings for components in
 const theme = extendTheme(customTheme);
 
+const httpLink = createHttpLink({uri: '/graphql',});
+// const httpLink = createHttpLink({uri: 'http://localhost:3001/graphql',});
+
+const authLink = setContext((_, {headers}) => {
+  const token = localStorage.getItem('id_token');
+  return {headers: { ...headers, authorization: token ? `Bearer ${token}` : '',},};
+  });
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
 export default function App() {
   return (
     <ChakraProvider theme={theme}>
