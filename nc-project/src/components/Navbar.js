@@ -8,30 +8,10 @@ import {
     BreadcrumbLink,
     BreadcrumbSeparator,
   } from '@chakra-ui/react';
-
-import { Link } from 'react-router-dom';
-// import { Flex, Box, Button } from '@chakra-ui/react';
 import AuthService from '../utils/auth';
 
 function Navbar() {
     return (
-        // <nav className="navbar">
-        //     <a href="/" className="home">Home</a>
-        //     <ul>
-        //         <li>
-        //             <a href="about">About Us</a>
-        //         </li>
-        //         <li>
-        //             <a href="service">Service Area</a>
-        //         </li>
-        //         <li>
-        //             <a href="reviews">Reviews</a>
-        //         </li>
-        //         <li>
-        //             <a href="contact">Contact Us</a>
-        //         </li>
-        //     </ul>
-        // </nav>
         <nav>
             <Flex align="center" justify="right">
             <Box display="flex" alignItems="center" justifyContent="space-between">

@@ -108,38 +108,6 @@ function ContactForm() {
           </Button>
         </form>
       </Box>
-    {/* <Box flex={1}>
-      <form>
-        <FormControl id="firstName" isRequired>
-          <FormLabel>First Name</FormLabel>
-          <Input type="text" />
-        </FormControl>
-
-        <FormControl id="lastName" isRequired>
-          <FormLabel>Last Name</FormLabel>
-          <Input type="text" />
-        </FormControl>
-
-        <FormControl id="phoneNumber" isRequired>
-          <FormLabel>Phone Number</FormLabel>
-          <Input type="tel" />
-        </FormControl>
-
-        <FormControl id="email" isRequired>
-          <FormLabel>Email</FormLabel>
-          <Input type="email" />
-        </FormControl>
-
-        <FormControl id="message" isRequired>
-          <FormLabel>Message</FormLabel>
-          <Textarea />
-        </FormControl>
-
-        <Button variant="red" type="submit">
-          Submit
-        </Button>
-      </form>
-    </Box> */}
     <Box flex={1} bg="blue" color="white" p={4} display="flex" alignItems="center" justifyContent="center" fontSize="20px">
     <div>
         <h2 class="contactHeader" mb={4} fontWeight="600">NORTHERN COMFORT LLC</h2>

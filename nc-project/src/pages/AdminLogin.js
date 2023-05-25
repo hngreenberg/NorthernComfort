@@ -1,8 +1,6 @@
-// see SignupForm.js for comments
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 
-// import { loginUser } from '../utils/API';
 import { useMutation } from '@apollo/client';
 import { LOGIN_ADMIN } from '../utils/mutations';
 import { useNavigate } from 'react-router-dom';
@@ -14,7 +12,6 @@ const LoginForm = () => {
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [login, { error, data }] = useMutation(LOGIN_ADMIN);
-  // const [formState, setFormState] = useState({ email: '', password: '' });
   const navigate = useNavigate();
 
   const handleInputChange = (event) => {
@@ -51,29 +48,7 @@ const LoginForm = () => {
       console.error(err);
       setShowAlert(true);
     }
-
-    // setUserFormData({
-    //   username: '',
-    //   email: '',
-    //   password: '',
-    // });
-    // navigate.push('/messages');
   };
-
-  // const handleFormSubmit = async (event) => {
-  //   event.preventDefault();
-  //   try {
-  //     const { data } = await login({
-  //       variables: { ...formState },
-  //     });
-  //     Auth.login(data.login.token);
-  //     setFormState({ email: '', password: '' });
-  //     navigate.push('/messages'); // navigate to the /messages route
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
-
   return (
     <>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
