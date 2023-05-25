@@ -4,7 +4,7 @@ import customTheme from "./customTheme";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import ContactForm from "./pages/Contact";
+import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import './App.css';
 import About from "./pages/About";
@@ -14,6 +14,8 @@ import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@ap
 import { setContext } from '@apollo/client/link/context';
 import AdminLogin from "./pages/AdminLogin";
 import ContactMessages from "./pages/ContactMessages";
+import ContactForm from "./pages/Contact";
+import Reviews from "./pages/Reviews";
 
 // extends theme to use custom-css settings for components in
 const theme = extendTheme(customTheme);
