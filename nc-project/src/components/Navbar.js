@@ -17,7 +17,8 @@ function Navbar() {
           fontWeight: "bold",
           fontSize: "18px",
           position: "relative",
-          zIndex:1
+          zIndex:1,
+          backgroundColor:"orange"
          }} >
             <Flex align="center" justify="right">
             <Box display="flex" alignItems="center" justifyContent="space-between">
