@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import './App.css';
 import About from "./pages/About";
 import Services from "./pages/Services";
+import './Fonts.css'
 
 // extends theme to use custom-css settings for components in
 const theme = extendTheme(customTheme);
