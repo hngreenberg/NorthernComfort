@@ -40,6 +40,28 @@ function Home() {
     //     //         {/* Add clickable button */}
     //     //       </section>
     //     // </div>
+    <>
+    <Box style={{
+      position: 'absolute',
+    }}>
+    <h2
+      className="headtitle"
+      style={{
+        fontWeight: "bold",
+        color: "#F2AF29",
+        textAlign: "center",
+        fontSize: "3em",
+        fontFamily: "'Satisfy', cursive",
+        textShadow: "1px 1px 2px black",
+        marginRight:"60vw",
+        transform: "rotate(-12deg)",
+        zIndex: 100, 
+        textDecoration:"underline",
+      }}
+    >
+      Your Comfort Matters To Us!!{" "}
+    </h2>
+  </Box>
     <Grid
       h="600px"
       templateRows="repeat(2, 1fr)"
@@ -53,8 +75,15 @@ function Home() {
         bgImage={`url(${bgImage})`}
         bgSize="cover"
         bgPosition="center"
-        transition="transform 0.2s ease-in-out"
+        transition="transform 0.4s ease-in-out"
         _hover={{ transform: "translateY(-10px)" }}
+      />
+
+      <GridItem
+        colSpan={2}
+        bg="papayawhip"
+        transition="transform 0.3s ease-in-out"
+        _hover={{ transform: "translateX(-10px)" }}
       />
 
       <GridItem
@@ -63,14 +92,7 @@ function Home() {
         transition="transform 0.3s ease-in-out"
         _hover={{ transform: "translateY(-10px)" }}
       />
-
-      <GridItem
-        colSpan={2}
-        bg="papayawhip"
-        transition="transform 0.3s ease-in-out"
-        _hover={{ transform: "translateY(-10px)" }}
-      />
-
+        
       <GridItem
         colSpan={4}
         bg="tomato"
@@ -78,6 +100,7 @@ function Home() {
         _hover={{ transform: "translateY(-10px)" }}
       />
     </Grid>
+    </>
   );
 }
 
