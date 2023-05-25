@@ -17,8 +17,8 @@ function About() {
       backgroundColor="blue"
     >
       <Grid templateColumns="50% 50%" gap={4} p="10" paddingTop={0}>
-        <GridItem colSpan={1} paddingTop={2}>
-          <div style={{ textAlign: "left", lineHeight: "4" }}>
+        <GridItem colSpan={1} paddingTop={16}>
+          <div style={{ textAlign: "left", lineHeight: "3" }}>
             <h1
               style={{
                 fontWeight: "bold",
@@ -72,7 +72,6 @@ function About() {
                 top: "14vw",
                 right: "13vw",
                 height: "35vw",
-                // opacity: 0.8,
                 filter: "drop-shadow(3px 10px 16px rgba(255, 255, 255, 0))",
                 marginTop: "60px",
                 zIndex:"1"
