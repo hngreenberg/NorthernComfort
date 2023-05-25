@@ -1,12 +1,17 @@
 import React from "react";
 import {
+    Flex,
+    Box,
+    Button,
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
     BreadcrumbSeparator,
-  } from '@chakra-ui/react'
+  } from '@chakra-ui/react';
 
-  import { Box, Flex } from "@chakra-ui/react"
+import { Link } from 'react-router-dom';
+// import { Flex, Box, Button } from '@chakra-ui/react';
+import AuthService from '../utils/auth';
 
 function Navbar() {
     return (
@@ -53,9 +58,19 @@ function Navbar() {
           <BreadcrumbLink href='contact'>Contact</BreadcrumbLink>
         </BreadcrumbItem>
 
-        <BreadcrumbItem>
-          <BreadcrumbLink href='login'>Admin Login</BreadcrumbLink>
-        </BreadcrumbItem>
+        {AuthService.loggedIn() && (
+          <BreadcrumbItem>
+            <BreadcrumbLink href='messages'>Messages</BreadcrumbLink>
+          </BreadcrumbItem>
+        )}
+
+          <BreadcrumbItem>
+            {AuthService.loggedIn() ? (
+              <BreadcrumbLink onClick={AuthService.logout}>Logout</BreadcrumbLink>
+            ) : (
+            <BreadcrumbLink href='login'>Admin Login</BreadcrumbLink>
+            )}
+          </BreadcrumbItem>
 
         </Breadcrumb>
              
