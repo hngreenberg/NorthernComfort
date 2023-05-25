@@ -37,6 +37,7 @@ function About() {
                 fontWeight: "bold",
                 fontSize: "1.1em",
                 textShadow: "2px 2px 2px black",
+                
               }}
             >
               Whether you are looking to maintain, repair, or replace your
@@ -66,11 +67,11 @@ function About() {
               src="mascot.png"
               alt="Overlay-bg"
               style={{
-                width: "20vw",
+                width: "27vw",
                 position: "absolute",
-                top: "20vw",
-                right: "17vw",
-                height: "25vw",
+                top: "14vw",
+                right: "13vw",
+                height: "35vw",
                 opacity: 0.8,
                 filter: "drop-shadow(3px 10px 16px rgba(255, 255, 255, 0))",
                 marginTop: "60px",
@@ -93,7 +94,7 @@ function About() {
               gap={16}
               position="absolute"
               bottom="60"
-              fontSize="5vw"
+              fontSize="3vw"
               filter= "drop-shadow( 5px 4px 1px #fff)"
             >
               <a
