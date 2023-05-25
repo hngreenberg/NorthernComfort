@@ -17,8 +17,8 @@ function About() {
       backgroundColor="blue"
     >
       <Grid templateColumns="50% 50%" gap={4} p="10" paddingTop={0}>
-        <GridItem colSpan={1} paddingTop={2}>
-          <div style={{ textAlign: "left", lineHeight: "4" }}>
+        <GridItem colSpan={1} paddingTop={16} marginTop={14}>
+          <div style={{ textAlign: "left", lineHeight: "3" }}>
             <h1
               style={{
                 fontWeight: "bold",
@@ -29,7 +29,7 @@ function About() {
                 textShadow: "3px 5px 4px black",
               }}
             >
-              Our Commitment To You!
+              Our Commitment To You!!
             </h1>
             <p
               style={{
@@ -37,6 +37,7 @@ function About() {
                 fontWeight: "bold",
                 fontSize: "1.1em",
                 textShadow: "2px 2px 2px black",
+                
               }}
             >
               Whether you are looking to maintain, repair, or replace your
@@ -48,7 +49,7 @@ function About() {
             <p
               style={{
                 color: "white",
-                fontWeight: "bolder",
+                fontWeight: "bold",
                 fontSize: "1.1em",
                 textShadow: "2px 2px 2px black",
               }}
@@ -66,34 +67,35 @@ function About() {
               src="mascot.png"
               alt="Overlay-bg"
               style={{
-                width: "20vw",
+                width: "27vw",
                 position: "absolute",
-                top: "20vw",
-                right: "17vw",
-                height: "25vw",
-                opacity: 0.8,
+                top: "14vw",
+                right: "13vw",
+                height: "35vw",
                 filter: "drop-shadow(3px 10px 16px rgba(255, 255, 255, 0))",
                 marginTop: "60px",
+                zIndex:"1"
               }}
             />
 
             <img
-              src="About-bg.jpg"
+              src="HVAc.jpg"
               alt="bgTexture"
               style={{
                 width: "80%",
                 height: "50vw",
                 boxShadow: "0 1px 20px black",
                 borderRadius: "90px",
+                filter: "grayscale(100%)",
               }}
             />
             <Flex 
               justifyContent="center"
               marginTop="4"
-              gap={16}
+              gap={24}
               position="absolute"
-              bottom="60"
-              fontSize="5vw"
+              bottom="10vw"
+              fontSize="3vw"
               filter= "drop-shadow( 5px 4px 1px #fff)"
             >
               <a
@@ -103,9 +105,9 @@ function About() {
               >
                 <FaTwitter className="Icons"
                   style={{
-                    color: isTwitterHovered ? "red" : "black",
+                    color: isTwitterHovered ? "blue" : "red",
                     marginRight: "10px",
-                    filter: "drop-shadow(0 0 3px #fff)",
+                    filter: "drop-shadow(0 0 8px white)",
                   }}
                   onMouseEnter={() => setIsTwitterHovered(true)}
                   onMouseLeave={() => setIsTwitterHovered(false)}
@@ -118,9 +120,9 @@ function About() {
               >
                 <FaInstagram className="Icons"
                   style={{
-                    color: isInstagramHovered ? "red" : "black",
+                    color: isInstagramHovered ? "blue" : "red",
                     marginRight: "10px",
-                    filter: "drop-shadow(0 0 3px #ffff",
+                    filter: "drop-shadow(0 0 8px #ffff",
                   }}
                   onMouseEnter={() => setIsInstagramHovered(true)}
                   onMouseLeave={() => setIsInstagramHovered(false)}
@@ -133,9 +135,9 @@ function About() {
               >
                 <FaEnvelope className="Icons"
                   style={{
-                    color: isEnvelopeHovered ? "red" : "black",
+                    color: isEnvelopeHovered ? "blue" : "red",
                     marginRight: "10px",
-                    filter: "drop-shadow(0 0 3px #fff)",
+                    filter: "drop-shadow(0 0 8px #fff)",
                   }}
                     onMouseEnter={() => setIsEnvelopeHovered(true)}
                     onMouseLeave={() => setIsEnvelopeHovered(false)}
