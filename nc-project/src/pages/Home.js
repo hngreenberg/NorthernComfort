@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Box, Text, Grid, GridItem } from "@chakra-ui/react";
 import bgImage from '../images/couple-sitting.jpg';
@@ -60,8 +61,8 @@ import "../Fonts.css";
 
 // export default Home;
 
-// import React from 'react';
-// import "../Fonts.css";
+import React from 'react';
+import "../Fonts.css";
 
 function Home() {
   return (
@@ -104,3 +105,7 @@ function Home() {
   )}
 
 export default Home; 
+      
+
+
+ main
