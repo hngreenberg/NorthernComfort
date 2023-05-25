@@ -72,20 +72,22 @@ function About() {
                 top: "14vw",
                 right: "13vw",
                 height: "35vw",
-                opacity: 0.8,
+                // opacity: 0.8,
                 filter: "drop-shadow(3px 10px 16px rgba(255, 255, 255, 0))",
                 marginTop: "60px",
+                zIndex:"1"
               }}
             />
 
             <img
-              src="About-bg.jpg"
+              src="HVAc.jpg"
               alt="bgTexture"
               style={{
                 width: "80%",
                 height: "50vw",
                 boxShadow: "0 1px 20px black",
                 borderRadius: "90px",
+                filter: "grayscale()"
               }}
             />
             <Flex 
@@ -104,9 +106,9 @@ function About() {
               >
                 <FaTwitter className="Icons"
                   style={{
-                    color: isTwitterHovered ? "red" : "black",
+                    color: isTwitterHovered ? "blue" : "red",
                     marginRight: "10px",
-                    filter: "drop-shadow(0 0 3px #fff)",
+                    filter: "drop-shadow(0 0 8px white)",
                   }}
                   onMouseEnter={() => setIsTwitterHovered(true)}
                   onMouseLeave={() => setIsTwitterHovered(false)}
@@ -119,9 +121,9 @@ function About() {
               >
                 <FaInstagram className="Icons"
                   style={{
-                    color: isInstagramHovered ? "red" : "black",
+                    color: isInstagramHovered ? "blue" : "red",
                     marginRight: "10px",
-                    filter: "drop-shadow(0 0 3px #ffff",
+                    filter: "drop-shadow(0 0 8px #ffff",
                   }}
                   onMouseEnter={() => setIsInstagramHovered(true)}
                   onMouseLeave={() => setIsInstagramHovered(false)}
@@ -134,9 +136,9 @@ function About() {
               >
                 <FaEnvelope className="Icons"
                   style={{
-                    color: isEnvelopeHovered ? "red" : "black",
+                    color: isEnvelopeHovered ? "blue" : "red",
                     marginRight: "10px",
-                    filter: "drop-shadow(0 0 3px #fff)",
+                    filter: "drop-shadow(0 0 8px #fff)",
                   }}
                     onMouseEnter={() => setIsEnvelopeHovered(true)}
                     onMouseLeave={() => setIsEnvelopeHovered(false)}
