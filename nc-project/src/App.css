@@ -25,6 +25,10 @@
   gap: 2rem;
 }
 
+.contactHeader {
+  font-weight: 600;
+}
+
 .header {
   background-color: #BAD8F3;
 }
@@ -35,5 +39,4 @@
   bottom: 60px;
   font-weight: bold;
   font-size: 150%;
-
 }

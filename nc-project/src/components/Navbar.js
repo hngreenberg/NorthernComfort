@@ -1,37 +1,21 @@
 import React from "react";
 import {
+    Flex,
+    Box,
+    Button,
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
-    // BreadcrumbSeparator,
-  } from '@chakra-ui/react'
-
-  import { Box, Flex } from "@chakra-ui/react"
+    BreadcrumbSeparator,
+  } from '@chakra-ui/react';
+import AuthService from '../utils/auth';
 
 function Navbar() {
     return (
-        // <nav className="navbar">
-        //     <a href="/" className="home">Home</a>
-        //     <ul>
-        //         <li>
-        //             <a href="about">About Us</a>
-        //         </li>
-        //         <li>
-        //             <a href="service">Service Area</a>
-        //         </li>
-        //         <li>
-        //             <a href="reviews">Reviews</a>
-        //         </li>
-        //         <li>
-        //             <a href="contact">Contact Us</a>
-        //         </li>
-        //     </ul>
-        // </nav>
         <nav style={{
           fontFamily: "'Jost",
           fontWeight: "bold",
           fontSize: "18px", }} >
-          
             <Flex align="center" justify="right">
             <Box display="flex" alignItems="center" justifyContent="space-between">
         <Breadcrumb spacing="8px" >
@@ -57,9 +41,28 @@ function Navbar() {
           <BreadcrumbLink href='contact'>Contact</BreadcrumbLink>
         </BreadcrumbItem>
 
-        <BreadcrumbItem>
-          <BreadcrumbLink href='login'>Admin Login</BreadcrumbLink>
-        </BreadcrumbItem>
+        {AuthService.loggedIn() && (
+          <BreadcrumbItem>
+            <BreadcrumbLink href='messages'>Messages</BreadcrumbLink>
+          </BreadcrumbItem>
+        )}
+          <BreadcrumbItem>
+            {AuthService.loggedIn() ? (
+              <BreadcrumbLink onClick={AuthService.logout}>Logout</BreadcrumbLink>
+            ) : (
+            <BreadcrumbLink href='login'>Admin Login</BreadcrumbLink>
+            )}
+          </BreadcrumbItem>
+          
+          {/* {AuthService.loggedIn() ? (
+          <BreadcrumbItem>
+            <BreadcrumbLink href='signup'>Admin Signup</BreadcrumbLink>
+          </BreadcrumbItem>
+          ) : (
+          <BreadcrumbItem>
+            <BreadcrumbLink href='signup'></BreadcrumbLink>
+          </BreadcrumbItem>
+          )} */}
 
         </Breadcrumb>
              
