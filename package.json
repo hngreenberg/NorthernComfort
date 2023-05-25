@@ -7,7 +7,7 @@
     "start": "node server/server.js --ignore client",
     "develop": "concurrently \"cd server && npm run watch\" \"cd nc-project && npm start\"",
     "install": "cd server && npm i && cd ../nc-project && npm i",
-    "seed": "cd server && npm run seed",
+    "seed": "cd server/seeds && npm run seed",
     "build": "cd nc-project && npm run build"
   },
   "author": "",

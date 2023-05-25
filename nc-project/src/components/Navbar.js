@@ -43,7 +43,6 @@ function Navbar() {
             <BreadcrumbLink href='messages'>Messages</BreadcrumbLink>
           </BreadcrumbItem>
         )}
-
           <BreadcrumbItem>
             {AuthService.loggedIn() ? (
               <BreadcrumbLink onClick={AuthService.logout}>Logout</BreadcrumbLink>
@@ -51,6 +50,16 @@ function Navbar() {
             <BreadcrumbLink href='login'>Admin Login</BreadcrumbLink>
             )}
           </BreadcrumbItem>
+          
+          {/* {AuthService.loggedIn() ? (
+          <BreadcrumbItem>
+            <BreadcrumbLink href='signup'>Admin Signup</BreadcrumbLink>
+          </BreadcrumbItem>
+          ) : (
+          <BreadcrumbItem>
+            <BreadcrumbLink href='signup'></BreadcrumbLink>
+          </BreadcrumbItem>
+          )} */}
 
         </Breadcrumb>
              
