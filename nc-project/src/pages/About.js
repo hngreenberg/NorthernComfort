@@ -14,7 +14,7 @@ function About() {
       border="2px solid black"
       padding="10px"
       boxShadow="0 0 10px rgba(0, 0, 0, 0.1)"
-      backgroundColor="blue"
+      backgroundColor="tomato"
     >
       <Grid templateColumns="50% 50%" gap={4} p="10" paddingTop={0}>
         <GridItem colSpan={1} paddingTop={16} marginTop={14}>
@@ -22,7 +22,7 @@ function About() {
             <h1
               style={{
                 fontWeight: "bold",
-                color: "red",
+                color: "papayawhip",
                 textAlign: "center",
                 fontSize: "4em",
                 fontFamily: "'Satisfy', cursive",
