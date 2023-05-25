@@ -29,7 +29,7 @@ function About() {
                 textShadow: "3px 5px 4px black",
               }}
             >
-              Our Commitment To You!
+              Our Commitment To You!!
             </h1>
             <p
               style={{
@@ -49,7 +49,7 @@ function About() {
             <p
               style={{
                 color: "white",
-                fontWeight: "bolder",
+                fontWeight: "bold",
                 fontSize: "1.1em",
                 textShadow: "2px 2px 2px black",
               }}
@@ -92,9 +92,9 @@ function About() {
             <Flex 
               justifyContent="center"
               marginTop="4"
-              gap={16}
+              gap={24}
               position="absolute"
-              bottom="60"
+              bottom="10vw"
               fontSize="3vw"
               filter= "drop-shadow( 5px 4px 1px #fff)"
             >
