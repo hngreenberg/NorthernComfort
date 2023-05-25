@@ -3,7 +3,7 @@ import {
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
-    BreadcrumbSeparator,
+    // BreadcrumbSeparator,
   } from '@chakra-ui/react'
 
   import { Box, Flex } from "@chakra-ui/react"
@@ -27,7 +27,11 @@ function Navbar() {
         //         </li>
         //     </ul>
         // </nav>
-        <nav>
+        <nav style={{
+          fontFamily: "'Jost",
+          fontWeight: "bold",
+          fontSize: "18px", }} >
+          
             <Flex align="center" justify="right">
             <Box display="flex" alignItems="center" justifyContent="space-between">
         <Breadcrumb spacing="8px" >

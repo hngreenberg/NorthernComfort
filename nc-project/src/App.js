@@ -4,16 +4,13 @@ import customTheme from "./customTheme";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import ContactForm from "./pages/Contact";
+import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import './App.css';
 import About from "./pages/About";
 import Services from "./pages/Services";
-<<<<<<< HEAD
 import './Fonts.css'
-=======
 import Reviews from "./pages/Reviews";
->>>>>>> c0ae318 (minor changes)
 
 // extends theme to use custom-css settings for components in
 const theme = extendTheme(customTheme);
@@ -27,7 +24,7 @@ export default function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<ContactForm />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="about" element={<About />} />
             <Route path="services" element={<Services />} />
             <Route path="reviews" element={<Reviews />} />

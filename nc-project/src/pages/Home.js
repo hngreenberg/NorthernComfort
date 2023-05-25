@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "../Fonts.css";
 
 function Home() {
   return (
