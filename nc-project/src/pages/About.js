@@ -87,7 +87,7 @@ function About() {
                 height: "50vw",
                 boxShadow: "0 1px 20px black",
                 borderRadius: "90px",
-                filter: "grayscale()"
+                filter: "grayscale(100%)",
               }}
             />
             <Flex 
