@@ -9,7 +9,11 @@ import Navbar from "./components/Navbar";
 import './App.css';
 import About from "./pages/About";
 import Services from "./pages/Services";
+<<<<<<< HEAD
 import './Fonts.css'
+=======
+import Reviews from "./pages/Reviews";
+>>>>>>> c0ae318 (minor changes)
 
 // extends theme to use custom-css settings for components in
 const theme = extendTheme(customTheme);
@@ -26,6 +30,7 @@ export default function App() {
             <Route path="/contact" element={<ContactForm />} />
             <Route path="about" element={<About />} />
             <Route path="services" element={<Services />} />
+            <Route path="reviews" element={<Reviews />} />
           </Routes>
           <Footer />
         </Router>

@@ -24,7 +24,7 @@ function Home() {
         <h2>Areas we Serve </h2>
         <p>
           Snohomish County, Skagit County, and King County
-          {/* Click here for map */}
+          {/* add button for map of area */}
         </p>
       </section>
 
