@@ -1,8 +1,9 @@
 
 <a href="#">
-    <img src="/Users/adrianmora/Documents/bootcamp/homework/Project-3/nc-project/public/nclogo1.jpg" title="norther-comfort"  height="200" width="90%"/>
+    <img src="nc-project/src/images/NC-Logo.jpg" title="norther-comfort"  height="200" width="90%"/>
 </a>
 <br>
+
 <p align="center">
 <img src="https://img.shields.io/badge/React-lightblue" />
     <img src="https://img.shields.io/badge/Javascript-yellow" />
