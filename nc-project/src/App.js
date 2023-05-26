@@ -46,6 +46,7 @@ export default function App() {
               <Route path="/contact" element={<ContactForm />} />
               <Route path="/login" element={<AdminLogin />} />
               <Route path="/messages" element={<ContactMessages />} />
+              <Route path="/reviews" element={<Reviews />} />
               <Route path="about" element={<About />} />
               <Route path="services" element={<Services />} />
             </Routes>
