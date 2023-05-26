@@ -20,10 +20,9 @@ function Services() {
         width="800"
         height="550"
         style={{ border: 0 }}
-        allowFullScreen={false}
+        allowFullScreen= {false}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="map services"
       ></iframe>
     </Box>
     </>
