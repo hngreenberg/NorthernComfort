@@ -20,8 +20,8 @@ import Reviews from "./pages/Reviews";
 // extends theme to use custom-css settings for components in
 const theme = extendTheme(customTheme);
 
-// const httpLink = createHttpLink({uri: '/graphql',});
-const httpLink = createHttpLink({uri: 'http://localhost:3001/graphql',});
+const httpLink = createHttpLink({uri: '/graphql',});
+// const httpLink = createHttpLink({uri: 'http://localhost:3001/graphql',});
 
 const authLink = setContext((_, {headers}) => {
   const token = localStorage.getItem('id_token');
