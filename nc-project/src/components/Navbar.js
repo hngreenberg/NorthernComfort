@@ -13,7 +13,7 @@ import AuthService from '../utils/auth';
 function Navbar() {
     return (
         <nav style={{
-          fontFamily: "'Jost",
+          fontFamily: "Jost",
           fontWeight: "bold",
           fontSize: "18px",
           position: "relative",
