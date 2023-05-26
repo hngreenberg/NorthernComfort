@@ -1,9 +1,10 @@
 import React from "react";
 import { PhoneIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
-import { Box, Grid, GridItem, Text, Image } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Text, Image, UnorderedList, ListItem   } from "@chakra-ui/react";
 import bgImage from "../images/couple-sitting.jpg";
 import couple2 from "../images/couple-hot2.jpg";
+import summer from "../images/summer.jpg";
 import "../Fonts.css";
 
 function Home() {
@@ -105,15 +106,52 @@ function Home() {
           bg="papayawhip"
           transition="transform 0.3s ease-in-out"
           _hover={{ transform: "translateX(-10px)" }}
-        />
+          bgImage={`url(${summer})`}
+          bgSize="cover"
+          bgPosition="center"
+        >
+
+        </GridItem>
 
         <GridItem
           colSpan={2}
           bg="papayawhip"
           transition="transform 0.3s ease-in-out"
           _hover={{ transform: "translateY(-10px)" }}
-        />
+        >
+          <Box>
+            <center>
+              <Text textAlign="center" style={{
+                fontSize:"2vw",
+                marginTop:"40px",
+                fontFamily:"jost",
+              }}>
+                A Company You Can Trust
+              </Text>
+            </center>
+            <UnorderedList listStyleType="disc" style={{
+              fontSize:"15px",
+              marginLeft:"13vw",
+              marginTop:"10px"
+            }}>
+                  <ListItem>Family owened and operated</ListItem>
+                  <ListItem>Friendly and personable</ListItem>
+                  <ListItem>Trustworthy and honest</ListItem>
+                  <ListItem>Highly experienced</ListItem>
+                  <ListItem>Proudly veteran-owned</ListItem>
+              </UnorderedList>
+              <Text style={{
+                textAlign:"center",
+                marginTop:"10px",
+                fontFamily:"jost",
+                fontSize:"1em"
+              }}>
+                You can count on us for all your heating and cooling services.
+              </Text>
+          </Box>
+        </GridItem>
 
+        {/* --- bottom grid --*/}
         <GridItem
           colSpan={4}
           bg="tomato"
@@ -152,12 +190,12 @@ function Home() {
                 </Text>
                 <Text style={{
                   textDecoration:"underline",
-                  marginLeft:"19vw",
-                  marginTop:"3px"
+                  marginLeft:"21vw",
+                  marginTop:"3px",
                 }}>
-                <Link to="/contact">
-                  <Text><strong>Schedule Today!</strong></Text>
-                 </Link>
+                  <Link to="/contact">
+                  <Text><strong>Schedule Today</strong></Text>
+                  </Link>
                 </Text>
               </Box>
         </GridItem>
