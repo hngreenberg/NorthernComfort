@@ -3,13 +3,11 @@ import { Box, Text } from "@chakra-ui/react";
 
 function Reviews() {
 return (
-<div>
+<div style={{ margin: '25px' }}>
  <Box>
    <Text style={{
     fontWeight: "bold",
     fontFamily: "Jost"
-    ,
-
    }}>
 
 "William was incredible even before he got there! The window I was given was 3-5, and at 2:45, I received a text that said he was en route. He arrived promptly at 3:00!  He diagnosed the problem, talked through what was going on, and how he was going to address it, and gave me all of the necessary info for what was to come within the next few years with the system. On top of everything else, his prices were great!"
