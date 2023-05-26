@@ -58,7 +58,7 @@ function ContactForm() {
       <Box flex={1}>
         <form style={{ padding: '15px' }} onSubmit={handleFormSubmit}>
           <FormControl id="firstName">
-            <FormLabel>First Name {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
+            <FormLabel color="blue" fontWeight="bold">First Name {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
             <Input
               type="text"
               name="firstName"
@@ -69,7 +69,7 @@ function ContactForm() {
           </FormControl>
 
           <FormControl id="lastName">
-            <FormLabel style={{ marginTop: '10px' }}>Last Name {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
+            <FormLabel color="blue" fontWeight="bold" style={{ marginTop: '10px' }}>Last Name {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
             <Input
               type="text"
               name="lastName"
@@ -80,7 +80,7 @@ function ContactForm() {
           </FormControl>
 
           <FormControl id="phoneNumber" >
-            <FormLabel style={{ marginTop: '10px' }}>Phone Number {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
+            <FormLabel color="blue" fontWeight="bold" style={{ marginTop: '10px' }}>Phone Number {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
             <Input
               type="tel"
               name="phoneNumber"
@@ -91,7 +91,7 @@ function ContactForm() {
           </FormControl>
 
           <FormControl id="email" >
-            <FormLabel style={{ marginTop: '10px' }}>Email {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
+            <FormLabel color="blue" fontWeight="bold" style={{ marginTop: '10px' }}>Email {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
             <Input
               type="email"
               name="email"
@@ -102,7 +102,7 @@ function ContactForm() {
           </FormControl>
 
           <FormControl id="message" >
-            <FormLabel style={{ marginTop: '10px' }}>Message {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
+            <FormLabel color="blue" fontWeight="bold" style={{ marginTop: '10px' }}>Message {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
             <Textarea
               name="message"
               value={formState.message}
