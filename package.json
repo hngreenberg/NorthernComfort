@@ -4,7 +4,7 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "start": "npm run build && node server/server.js --ignore nc-project",
+    "start": "npm run build && node server/server.js --ignore client",
     "develop": "concurrently \"cd server && npm run watch\" \"cd nc-project && npm start\"",
     "install": "cd server && npm i && cd ../nc-project && npm i",
     "seed": "cd server/seeds && npm run seed",
