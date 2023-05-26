@@ -31,7 +31,7 @@ const ContactMessages = () => {
   return (
     <>
       <h1 style={{ fontWeight: 'bold', color: 'lightcoral', textAlign: 'center', marginTop: '20px', fontSize: '25px'}}>Welcome, Admin!</h1>
-      <ul style={{ listStyleType: 'none' }}>
+      <ul style={{ listStyleType: 'none', marginLeft: '18%'}}>
         {contactMessages.map((message) => (
           <li key={message._id} style={{ margin: '25px' , borderBottom: '2px dashed lightblue', width: '75%' }}>
             <p> <span style={{ fontWeight: 'bold', color: 'lightblue' }}>Name:</span><span style={{ fontStyle: 'italic' , color: 'blue'}}>{message.firstName} {message.lastName}</span></p>
