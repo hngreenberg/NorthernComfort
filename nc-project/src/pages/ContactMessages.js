@@ -16,6 +16,13 @@ const ContactMessages = () => {
 
   const contactMessages = data?.contactMessages || [];
 
+  const [responded, setResponded] = useState({});
+
+  const handleReplyClick = (email) => {
+    setResponded((prevState) => ({ ...prevState, [email]: true }));
+    window.location.href = `mailto:${email}`;
+  };
+
   // if data isn't here yet, say so
   if (loading) {
     return <h2>LOADING...</h2>;
@@ -23,13 +30,13 @@ const ContactMessages = () => {
 
   return (
     <>
-      <h1>Welcome, admin!</h1>
-      <ul>
+      <h1 style={{ fontWeight: 'bold', color: 'lightcoral', textAlign: 'center', marginTop: '20px', fontSize: '25px'}}>Welcome, Admin!</h1>
+      <ul style={{ listStyleType: 'none' }}>
         {contactMessages.map((message) => (
-          <li key={message._id}>
-            <p>Name: {message.firstName} {message.lastName}</p>
-            <p>Email: {message.email}</p>
-            <p>Message: {message.message}</p>
+          <li key={message._id} style={{ margin: '25px' , borderBottom: '2px dashed lightblue', width: '75%' }}>
+            <p> <span style={{ fontWeight: 'bold', color: 'lightblue' }}>Name:</span><span style={{ fontStyle: 'italic' , color: 'blue'}}>{message.firstName} {message.lastName}</span></p>
+            <p><span style={{ fontWeight: 'bold', color: 'lightblue' }}>Email:</span> {message.email}<a href={`mailto:${message.email}`} style={{ fontWeight: 'bold', color: 'blue' }} onClick={() => handleReplyClick(message.email)}> Reply</a>{responded[message.email] && <span style={{ fontWeight: 'bold', color: 'green' }}> Responded</span>}</p>
+            <p><span style={{ fontWeight: 'bold', color: 'lightblue' }}>Message:</span> {message.message}</p>
           </li>
         ))}
       </ul>
