@@ -1,48 +1,14 @@
 import React from "react";
 import { PhoneIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
-import { Box, Grid, GridItem, Text, Image } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Text, Image, UnorderedList, ListItem   } from "@chakra-ui/react";
 import bgImage from "../images/couple-sitting.jpg";
 import couple2 from "../images/couple-hot2.jpg";
+import summer from "../images/summer.jpg";
 import "../Fonts.css";
 
 function Home() {
   return (
-    //     //     <div>
-    //     //       <section id="about">
-    //     //         <h2>A COMPANY YOU CAN TRUST</h2>
-    //     //         <h3>YOU'RE SURE TO BE IMPRESSED BY OUR KNOWLEDGE AND EXPERTISE</h3>
-    //     //         <p>
-    //     //           You have every right to be picky about who you hire to work in your home. When you need heating and cooling services, you deserve complete confidence that the technicians will respect your space. That's why you should make Northern Comfort LLC your go-to local HVAC company in Arlington and surrounding areas.
-    //     //         </p>
-
-    //     //       </section>
-
-    //     //       <section id="about">
-    //     //         <h2>Let Our Family Take Care of Yours </h2>
-    //     //        <p>
-    //     //         We are a family-owned and operated company with over 23 years of experience, giving us the know-how needed to tackle any household or commercial HVAC project.
-    //     //        </p>
-    //     //       </section>
-
-    //       // <section id="service area">
-    //       //   <h2>Areas we Serve </h2>
-    //       //   <p>
-    //       //     Snohomish County, Skagit County, and King County
-    //       //     {/* Click here for map */}
-    //       //   </p>
-    //       // </section>
-
-    //     //       <section id="products">
-    //     //         <h2>The American Standard Way</h2>
-    //     //         We use only the best in the industry! American Standard is the gold standard of HVAC! With over 100 years of dependability that is unmatched.
-    //     //       </section>
-
-    //     //       <section id="contact">
-    //     //         <h2>Contact Us</h2>
-    //     //         {/* Add clickable button */}
-    //     //       </section>
-    //     // </div>
     <>
       <Box
         style={{
@@ -105,15 +71,52 @@ function Home() {
           bg="papayawhip"
           transition="transform 0.3s ease-in-out"
           _hover={{ transform: "translateX(-10px)" }}
-        />
+          bgImage={`url(${summer})`}
+          bgSize="cover"
+          bgPosition="center"
+        >
+
+        </GridItem>
 
         <GridItem
           colSpan={2}
           bg="papayawhip"
           transition="transform 0.3s ease-in-out"
           _hover={{ transform: "translateY(-10px)" }}
-        />
+        >
+          <Box>
+            <center>
+              <Text textAlign="center" style={{
+                fontSize:"2vw",
+                marginTop:"40px",
+                fontFamily:"jost",
+              }}>
+                A Company You Can Trust
+              </Text>
+            </center>
+            <UnorderedList listStyleType="disc" style={{
+              fontSize:"15px",
+              marginLeft:"13vw",
+              marginTop:"10px"
+            }}>
+                  <ListItem>Family owened and operated</ListItem>
+                  <ListItem>Friendly and personable</ListItem>
+                  <ListItem>Trustworthy and honest</ListItem>
+                  <ListItem>Highly experienced</ListItem>
+                  <ListItem>Proudly veteran-owned</ListItem>
+              </UnorderedList>
+              <Text style={{
+                textAlign:"center",
+                marginTop:"10px",
+                fontFamily:"jost",
+                fontSize:"1em"
+              }}>
+                You can count on us for all your heating and cooling services.
+              </Text>
+          </Box>
+        </GridItem>
 
+        {/* --- bottom grid --*/}
         <GridItem
           colSpan={4}
           bg="tomato"
@@ -150,10 +153,14 @@ function Home() {
                   Call our HVAC experts today to ensure your AC is in top shape and ready to keep you cool all summer long. Our skilled technicians will provide professional maintenance and repairs to keep your system running strong, delivering refreshing cool air when you need it the most.
                   Don't wait until it's too late! Give us a call now and schedule your AC service. Stay comfortable, stay cool, and enjoy the summer without breaking a sweat!
                 </Text>
-                <Text>
-                <Link to="/contact">
-        <Text>Go to Contact Page</Text>
-      </Link>
+                <Text style={{
+                  textDecoration:"underline",
+                  marginLeft:"21vw",
+                  marginTop:"3px",
+                }}>
+                  <Link to="/contact">
+                  <Text><strong>Schedule Today</strong></Text>
+                  </Link>
                 </Text>
               </Box>
         </GridItem>
