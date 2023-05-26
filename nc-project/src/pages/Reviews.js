@@ -7,8 +7,8 @@ return (
  <Box>
    <Text style={{
     fontWeight: "bold",
-    fontFamily: "Jost"
-    ,
+    fontFamily: "Jost",
+    
 
    }}>
 
