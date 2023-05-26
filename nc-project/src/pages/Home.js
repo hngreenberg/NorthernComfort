@@ -150,10 +150,14 @@ function Home() {
                   Call our HVAC experts today to ensure your AC is in top shape and ready to keep you cool all summer long. Our skilled technicians will provide professional maintenance and repairs to keep your system running strong, delivering refreshing cool air when you need it the most.
                   Don't wait until it's too late! Give us a call now and schedule your AC service. Stay comfortable, stay cool, and enjoy the summer without breaking a sweat!
                 </Text>
-                <Text>
+                <Text style={{
+                  textDecoration:"underline",
+                  marginLeft:"19vw",
+                  marginTop:"3px"
+                }}>
                 <Link to="/contact">
-        <Text>Go to Contact Page</Text>
-      </Link>
+                  <Text><strong>Schedule Today!</strong></Text>
+                 </Link>
                 </Text>
               </Box>
         </GridItem>
