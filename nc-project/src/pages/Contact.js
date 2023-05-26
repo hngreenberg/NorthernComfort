@@ -6,10 +6,13 @@ import {
     Textarea,
     Button,
     Flex,
+    Text,
     Box,
 } from "@chakra-ui/react";
 import { useMutation } from '@apollo/client';
 import { ADD_CONTACT_MESSAGE } from '../utils/mutations';
+
+const isRequired = true;
 
 function ContactForm() {
   const [formState, setFormState] = useState({
@@ -53,70 +56,75 @@ function ContactForm() {
   return (
     <Flex>
       <Box flex={1}>
-        <form onSubmit={handleFormSubmit}>
-          <FormControl id="firstName" isRequired>
-            <FormLabel>First Name</FormLabel>
+        <form style={{ padding: '15px' }} onSubmit={handleFormSubmit}>
+          <FormControl id="firstName">
+            <FormLabel>First Name {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
             <Input
               type="text"
               name="firstName"
               value={formState.firstName}
               onChange={handleInputChange}
+              borderColor="blue"
             />
           </FormControl>
 
-          <FormControl id="lastName" isRequired>
-            <FormLabel>Last Name</FormLabel>
+          <FormControl id="lastName">
+            <FormLabel style={{ marginTop: '10px' }}>Last Name {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
             <Input
               type="text"
               name="lastName"
               value={formState.lastName}
               onChange={handleInputChange}
+              borderColor="blue"
             />
           </FormControl>
 
-          <FormControl id="phoneNumber" isRequired>
-            <FormLabel>Phone Number</FormLabel>
+          <FormControl id="phoneNumber" >
+            <FormLabel style={{ marginTop: '10px' }}>Phone Number {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
             <Input
               type="tel"
               name="phoneNumber"
               value={formState.phoneNumber}
               onChange={handleInputChange}
+              borderColor="blue"
             />
           </FormControl>
 
-          <FormControl id="email" isRequired>
-            <FormLabel>Email</FormLabel>
+          <FormControl id="email" >
+            <FormLabel style={{ marginTop: '10px' }}>Email {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
             <Input
               type="email"
               name="email"
               value={formState.email}
               onChange={handleInputChange}
+              borderColor="blue"
             />
           </FormControl>
 
-          <FormControl id="message" isRequired>
-            <FormLabel>Message</FormLabel>
+          <FormControl id="message" >
+            <FormLabel style={{ marginTop: '10px' }}>Message {isRequired && <Text as="span" color="red">*</Text>}</FormLabel>
             <Textarea
               name="message"
               value={formState.message}
               onChange={handleInputChange}
+              borderColor="blue"
             />
           </FormControl>
 
-          <Button type="submit" isLoading={loading}>
+          <Button style={{ marginTop: '10px', backgroundColor: 'blue' }} type="submit" isLoading={loading}>
             Submit
           </Button>
         </form>
       </Box>
     <Box flex={1} bg="blue" color="white" p={4} display="flex" alignItems="center" justifyContent="center" fontSize="20px">
     <div>
-        <h2 class="contactHeader" mb={4} fontWeight="600">NORTHERN COMFORT LLC</h2>
+        <h2 className="contactHeader" mb={4} fontWeight="600">NORTHERN COMFORT LLC</h2>
         <p>Arlington, WA 98223</p>
 
-        <h3 class="contactHeader" mb={2} fontWeight="600">CALL US</h3>
+        <h3 className="contactHeader" mb={2} fontWeight="600">CALL US</h3>
         <p fontWeight="600">Phone: <a href="tel:+14255884139" style={{ color: "red" }}>(425) 588-4139</a></p>
 
-        <h3 class="contactHeader" mb={2} fontWeight="600">HOURS</h3>
+        <h3 className="contactHeader" mb={2} fontWeight="600">HOURS</h3>
         <p>Mon: 8:00AM-8:00PM</p>
         <p>Tue: 8:00AM-8:00PM</p>
         <p>Wed: 8:00AM-8:00PM</p>
