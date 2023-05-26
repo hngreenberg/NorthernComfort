@@ -6,6 +6,8 @@
 #footerlogo {
   max-width: 5%;
   height: auto;
+  position:relative;
+  left: 30px;
 }
 
 
@@ -39,4 +41,13 @@
   bottom: 60px;
   font-weight: bold;
   font-size: 150%;
+}
+
+.footer {
+  background-color: #aed0ef;
+}
+
+.footertxt {
+  position: relative;
+  left: 50px; 
 }

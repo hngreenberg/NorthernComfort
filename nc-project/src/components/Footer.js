@@ -6,6 +6,11 @@ function Footer() {
       
        
         <img id="footerlogo" src="mascot.png" alt="" />  
+        <p className="footertxt">
+          Call: 425-588-4139
+          
+        </p>
+        
          
       </div>
     
@@ -14,3 +19,4 @@ function Footer() {
 }
 
 export default Footer;
+
