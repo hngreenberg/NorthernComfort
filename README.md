@@ -1,6 +1,6 @@
 
 <a href="#">
-    <img src="/Users/adrianmora/Documents/bootcamp/homework/Project-3/nc-project/public/nclogo1.jpg" title="Populist"  height="200" width="100%"/>
+    <img src="/Users/adrianmora/Documents/bootcamp/homework/Project-3/nc-project/public/nclogo1.jpg" title="norther-comfort"  height="200" width="90%"/>
 </a>
 <br>
 <p align="center">
@@ -26,7 +26,7 @@
 ## Overview
 
 <p align="center">
-<img src="nc-project/src/images/Home-page.png" />
+<img src="nc-project/src/images/Home-page.png" height="70%" width="70%" />
 </p>
 
 [Live Link Coming Soon!]()
@@ -45,19 +45,19 @@ Northern Comfort is our application designed to streamline and enhance the HVAC 
 * Contact: Get in touch with their team directly through the application for any inquiries or additional information.
 
 <p align="center">
-<img src="nc-project/src/images/Contact-page.png" />
+<img src="nc-project/src/images/Contact-page.png" height="70%" width="70%" />
 </p>
 
 * Reviews: Read and write reviews and testimonials from satisfied customers who have used Northern Comfort.
 
 <p align="center">
-<img src="nc-project/src/images/Review-page.png" />
+<img src="nc-project/src/images/Review-page.png" height="70%" width="70%" />
 </p>
 
 * Admin Logging: Feature that allows authorized personnel to access and view important activities and system changes within the application.
 
 <p align="center">
-<img src="nc-project/src/images/Admin-page.png" />
+<img src="nc-project/src/images/Admin-page.png" height="70%" width="70%" />
 </p>
 
 ### Built With
