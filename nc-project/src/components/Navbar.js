@@ -8,6 +8,7 @@ import {
     BreadcrumbLink,
     BreadcrumbSeparator,
   } from '@chakra-ui/react';
+  import { Link } from "react-router-dom";
 import AuthService from '../utils/auth';
 
 function Navbar() {
@@ -28,32 +29,32 @@ function Navbar() {
      
       
         <BreadcrumbItem>
-          <BreadcrumbLink href='about'>About</BreadcrumbLink>
+          <Link to='/about'>About</Link>
         </BreadcrumbItem>
       
         <BreadcrumbItem >
-          <BreadcrumbLink href='services'>Service Area</BreadcrumbLink>
+          <Link to='/services'>Service Area</Link>
         </BreadcrumbItem>
   
 
         <BreadcrumbItem>
-        <BreadcrumbLink href='reviews'>Review</BreadcrumbLink>
+        <Link to='/reviews'>Review</Link>
         </BreadcrumbItem> 
 
         <BreadcrumbItem>
-          <BreadcrumbLink href='contact'>Contact</BreadcrumbLink>
+          <Link to='/contact'>Contact</Link>
         </BreadcrumbItem>
 
         {AuthService.loggedIn() && (
           <BreadcrumbItem>
-            <BreadcrumbLink href='messages'>Messages</BreadcrumbLink>
+            <Link to='/messages'>Messages</Link>
           </BreadcrumbItem>
         )}
           <BreadcrumbItem>
             {AuthService.loggedIn() ? (
-              <BreadcrumbLink onClick={AuthService.logout}>Logout</BreadcrumbLink>
+              <Link onClick={AuthService.logout}>Logout</Link>
             ) : (
-            <BreadcrumbLink href='login'>Admin Login</BreadcrumbLink>
+            <Link to='/login'>Admin Login</Link>
             )}
           </BreadcrumbItem>
           
