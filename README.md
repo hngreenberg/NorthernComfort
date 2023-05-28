@@ -56,7 +56,7 @@ Northern Comfort is our application designed to streamline and enhance the HVAC 
 </p>
 
 * Admin Logging: Feature that allows authorized personnel to access and view important activities and system changes within the application.
-* Feel free to check out admin functionality with the test user: admin@example.com / password
+* Feel free to check out admin functionality with the test user on the production build (located at https://northern-comfort.herokuapp.com/): admin@example.com / password
 
 <p align="center">
 <img src="nc-project/src/images/Admin-page.png" height="70%" width="70%" />
